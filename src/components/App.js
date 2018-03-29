@@ -1,12 +1,8 @@
 import React, { Component }  from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Navigation from './navigation';
-import SignUpPage from './signup';
-import SignInPage from './signin';
-import PasswordForgetPage from './password-forget';
-import HomePage from './home';
-import AccountPage from './account';
 import AboutPage from './about';
+import HomePage from './home';
 import * as routes from '../constants/routes';
 import { firebase } from '../firebase';
 
@@ -27,27 +23,10 @@ class App extends Component {
     return(
       <BrowserRouter>
       <div>
-        <Navigation authUser={this.state.authUser}/>
-        <hr />
-        <Route
-          exact path={routes.SIGN_UP}
-          component={() => <SignUpPage />}
-        />
-        <Route
-          exact path={routes.SIGN_IN}
-          component={() => <SignInPage />}
-        />
-        <Route
-          exact path={routes.PASSWORD_FORGET}
-          component={() => <PasswordForgetPage />}
-        />
+        <Navigation/>
         <Route
           exact path={routes.HOME}
           component={() => <HomePage />}
-        />
-        <Route
-          exact path={routes.ACCOUNT}
-          component={() => <AccountPage authUser={this.state.authUser}/>}
         />
         <Route
           exact path={routes.ABOUT}
