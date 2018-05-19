@@ -1,0 +1,99 @@
+#hamburger {
+    display: none;
+}
+
+.menuicon {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    display: block;
+    cursor: pointer;
+    height: 21px;
+    width: 25px;
+}
+
+.menuicon>span {
+    display: block;
+    top: 20px;
+    width: 15px;
+    height: 2px;
+    background-color: #4a4a4a;
+    position: relative;
+    -webkit-transition-duration: 0;
+    -moz-transition-duration: 0;
+    -ms-transition-duration: 0;
+    -o-transition-duration: 0;
+    transition-duration: 0;
+    -webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    -ms-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+.menuicon>span::after,
+.menuicon>span::before {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 2px;
+    background-color: #4a4a4a;
+    -webkit-transition-property: margin, -webkit-transform;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-delay: .2s, 0;
+    -moz-transition-delay: .2s, 0;
+    -ms-transition-delay: .2s, 0;
+    -o-transition-delay: .2s, 0;
+    transition-delay: .2s, 0;
+}
+
+.menuicon>span::before {
+    margin-top: -5px;
+}
+
+.menuicon>span::after {
+    margin-top: 5px;
+}
+
+.menu {
+    display: block;
+    background-color: #AAA;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 50px;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -o-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-delay: .2s;
+    -moz-transition-delay: .2s;
+    -ms-transition-delay: .2s;
+    -o-transition-delay: .2s;
+    transition-delay: .2s;
+}
+
+.menulist {
+    padding-left: 10px;
+}
+
+.menuitem {
+    font-size: 24pt;
+    padding: 10px 0;
+}
+
+.menuitem>a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.menuitem>a:hover {
+    color: grey;
+}

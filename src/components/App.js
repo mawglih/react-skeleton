@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Navigation from './navigation';
 import AboutPage from './about';
 import HomePage from './home';
+import Hamburger from '../components/Navigation/Hamburger';
+import Sidebar from '../components/Navigation/Sidebar';
 import * as routes from '../constants/routes';
 import { firebase } from '../firebase';
 
@@ -23,7 +25,9 @@ class App extends Component {
     return(
       <BrowserRouter>
       <div>
-        <Navigation/>
+        <Hamburger />
+        <Sidebar />
+        
         <Route
           exact path={routes.HOME}
           component={() => <HomePage />}
