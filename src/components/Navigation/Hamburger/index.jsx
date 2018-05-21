@@ -1,15 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import '../Navigation.css';
 
 const Hamburger = ({
   click,
-  checked,
+  buttonStyle,
 }) => (
-  <Fragment>
-    <input type="checkbox" id="hamburger" />
+  <div className={buttonStyle}>
+    <input type="button" id="hamburger" onClick={click} />
     <label className="menuicon" htmlFor="hamburger">
-      <span></span>
+      <span ></span>
     </label>
-  </Fragment>
+  </div>
 );
 export default Hamburger;
+

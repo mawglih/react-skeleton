@@ -1,6 +1,12 @@
 #hamburger {
     display: none;
 }
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+  }
 
 .menuicon {
     position: absolute;
@@ -19,16 +25,6 @@
     height: 2px;
     background-color: #4a4a4a;
     position: relative;
-    -webkit-transition-duration: 0;
-    -moz-transition-duration: 0;
-    -ms-transition-duration: 0;
-    -o-transition-duration: 0;
-    transition-duration: 0;
-    -webkit-transition-delay: .2s;
-    -moz-transition-delay: .2s;
-    -ms-transition-delay: .2s;
-    -o-transition-delay: .2s;
-    transition-delay: .2s;
 }
 
 .menuicon>span::after,
@@ -39,17 +35,6 @@
     width: 15px;
     height: 2px;
     background-color: #4a4a4a;
-    -webkit-transition-property: margin, -webkit-transform;
-    -webkit-transition-duration: .2s;
-    -moz-transition-duration: .2s;
-    -ms-transition-duration: .2s;
-    -o-transition-duration: .2s;
-    transition-duration: .2s;
-    -webkit-transition-delay: .2s, 0;
-    -moz-transition-delay: .2s, 0;
-    -ms-transition-delay: .2s, 0;
-    -o-transition-delay: .2s, 0;
-    transition-delay: .2s, 0;
 }
 
 .menuicon>span::before {
@@ -60,23 +45,25 @@
     margin-top: 5px;
 }
 
-.menu {
+.menuS {
+    width: 250px;
     display: block;
-    background-color: #AAA;
-    width: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: rgb(226, 25, 25);
     height: 100%;
     overflow: hidden;
-    padding-top: 50px;
-    -webkit-transition-duration: .2s;
-    -moz-transition-duration: .2s;
-    -ms-transition-duration: .2s;
-    -o-transition-duration: .2s;
-    transition-duration: .2s;
-    -webkit-transition-delay: .2s;
-    -moz-transition-delay: .2s;
-    -ms-transition-delay: .2s;
-    -o-transition-delay: .2s;
-    transition-delay: .2s;
+    transition: .9s ease-in-out .2s;
+}
+.menuH {
+    position: absolute;
+    left: -300px;
+    height: 100%;
+    width: 250px;
+    overflow: hidden;
+    transition: .9s ease-in-out .2s;
 }
 
 .menulist {

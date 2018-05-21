@@ -3,8 +3,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Navigation from './navigation';
 import AboutPage from './about';
 import HomePage from './home';
-import Hamburger from '../components/Navigation/Hamburger';
-import Sidebar from '../components/Navigation/Sidebar';
 import * as routes from '../constants/routes';
 import { firebase } from '../firebase';
 
@@ -23,11 +21,9 @@ class App extends Component {
 
   render() {
     return(
+      
       <BrowserRouter>
       <div>
-        <Hamburger />
-        <Sidebar />
-        
         <Route
           exact path={routes.HOME}
           component={() => <HomePage />}
@@ -35,6 +31,10 @@ class App extends Component {
         <Route
           exact path={routes.ABOUT}
           component={() => <AboutPage />}
+        />
+        <Route
+          exact path="/"
+          component={() => <HomePage />}
         />
       </div>
   </BrowserRouter>
